@@ -61,7 +61,7 @@ The following test cases are automated in this project:
     1. Navigate to the login page.
     2. Leave the username and password fields empty.
     3. Click the "Login" button.
-    4. **Expected Result:** An error message "Epic sadface: Username is required" is displayed.
+    4. **Expected Result:** An error message "Epic sadface: Username is required" is displayed."
 
 - **UC-2: Test Login with a Valid Username and Empty Password**
   - **Description:** Ensures that an error message is shown when the password field is empty.
@@ -70,9 +70,18 @@ The following test cases are automated in this project:
     2. Enter a valid username (`standard_user`).
     3. Leave the password field empty.
     4. Click the "Login" button.
-    5. **Expected Result:** An error message "Epic sadface: Password is required" is displayed.
+    5. **Expected Result:** An error message "Epic sadface: Password is required" is displayed."
 
-- **UC-3: Test Successful Login with Valid Credentials**
+- **UC-3: Test Login with a Locked User**
+  - **Description:** Ensures that an error message is shown when the user is locked.
+  - **Steps:**
+    1. Navigate to the login page.
+    2. Enter a locked username (`locked_out_user`).
+    3. Enter password.
+    4. Click the "Login" button.
+    5. **Expected Result:** An error message "Epic sadface: Sorry, this user has been locked out."
+
+- **UC-4: Test Successful Login with Valid Credentials**
   - **Description:** Validates that a user can successfully log in with correct credentials and is redirected to the products page.
   - **Steps:**
     1. Navigate to the login page.
