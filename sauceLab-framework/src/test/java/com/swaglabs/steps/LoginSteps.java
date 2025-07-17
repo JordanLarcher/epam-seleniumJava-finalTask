@@ -6,6 +6,7 @@ import com.swaglabs.utils.WebDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -85,7 +86,7 @@ public class LoginSteps {
         assertThat(actualTitle, is(equalTo(expectedTitle)));
     }
 
-    @When("I add {int} products to the cart")
+    @And("I add {int} products to the cart")
     public void i_add_products_to_the_cart(int numberOfProducts){
         homePage.addProductsToCart(numberOfProducts);
     }

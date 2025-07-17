@@ -33,7 +33,7 @@ Feature: Swag Labs Login Functionality
 
   Scenario Outline: Add all items to cart and verify counter
     Given I open the "<browser>" browser and go to the login page
-    When I log in with the user "standard_user" and the password "secrete_sauce"
+    When I log in with the user "standard_user" and the password "secret_sauce"
     And I add 3 products to the cart
     Then The cart Counter must show 3
 
