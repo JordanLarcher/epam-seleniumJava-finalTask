@@ -4,14 +4,11 @@ import com.swaglabs.pages.LoginPage;
 import com.swaglabs.pages.HomePage;
 import com.swaglabs.utils.WebDriverFactory;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,15 +24,18 @@ public class LoginSteps {
     private LoginPage loginPage;
     private HomePage homePage;
 
-    @Before
-    public void setUp(Scenario scenario) {
-
-    }
+//    @Before
+//    public void setUp(Scenario scenario) {
+//
+//    }
 
     @After
     public void tearDown(Scenario scenario) {
         logger.info("Finishing Scenario: '{}'", scenario.getName());
         WebDriverFactory.quitDriver();
+        driver = null;
+        loginPage = null;
+        homePage = null;
     }
 
     @Given("I open the {string} browser and go to the login page")
